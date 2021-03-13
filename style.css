@@ -10,55 +10,45 @@
     "left-column fields right-column"
     "bottom-row bottom-row bottom-row";
 }
-.top-row {
+.top.numbering {
   grid-area: top-row;
 }
-.left-column {
+.left.numbering {
   grid-area: left-column;
 }
-.right-column {
+.right.numbering {
   grid-area: right-column;
 }
-.bottom-row {
+.bottom.numbering {
   grid-area: bottom-row;
 }
 .fields {
   grid-area: fields;
 }
-.top-row,
-.left-column,
-.bottom-row,
-.right-column {
+.numbering {
   display: flex;
   list-style-type: none;
   margin: 0;
   align-items: center;
 }
-.top-row,
-.bottom-row {
+.horizontal.numbering {
   flex-direction: row;
   padding-left: 25px;
   padding-right: 25px;
 }
-.left-column,
-.right-column {
+.vertical.numbering {
   flex-direction: column-reverse;
   padding: 0;
 }
-.top-row li,
-.bottom-row li,
-.left-column li,
-.right-column li {
+.numbering li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.top-row li,
-.bottom-row li {
+.horizontal.numbering li {
   width: calc(100% / 8);
 }
-.left-column li,
-.right-column li {
+.vertical.numbering li {
   height: calc(100% / 8);
 }
 

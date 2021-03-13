@@ -1,0 +1,89 @@
+.chess-board {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 25px 1fr 25px;
+  grid-template-rows: 25px 1fr 25px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "top-row top-row top-row"
+    "left-column fields right-column"
+    "bottom-row bottom-row bottom-row";
+}
+.top-row {
+  grid-area: top-row;
+}
+.left-column {
+  grid-area: left-column;
+}
+.right-column {
+  grid-area: right-column;
+}
+.bottom-row {
+  grid-area: bottom-row;
+}
+.fields {
+  grid-area: fields;
+}
+.top-row {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-around;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0;
+  align-items: center;
+}
+.left-column {
+  display: flex;
+  flex-direction: column-reverse;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.bottom-row {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-around;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0;
+  align-items: center;
+}
+.right-column {
+  display: flex;
+  flex-direction: column-reverse;
+  list-style-type: none;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.fields {
+  border: 1px solid black;
+}
+.row {
+  display: flex;
+  height: calc(100% / 8);
+}
+.field {
+  width: calc(100% / 8);
+  height: 100%;
+}
+.row:nth-child(even) .field:nth-child(odd) {
+  background-color: black;
+}
+.row:nth-child(odd) .field:nth-child(even) {
+  background-color: black;
+}
+.row:nth-child(even) .field:nth-child(even) {
+  background-color: white;
+}
+.row:nth-child(odd) .field:nth-child(odd) {
+  background-color: white;
+}

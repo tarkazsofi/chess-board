@@ -5,7 +5,6 @@
   display: grid;
   grid-template-columns: 25px 1fr 25px;
   grid-template-rows: 25px 1fr 25px;
-  gap: 0px 0px;
   grid-template-areas:
     "top-row top-row top-row"
     "left-column fields right-column"
@@ -26,44 +25,43 @@
 .fields {
   grid-area: fields;
 }
-.top-row {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  justify-content: space-around;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin: 0;
-  align-items: center;
-}
-.left-column {
-  display: flex;
-  flex-direction: column-reverse;
-  list-style-type: none;
-  justify-content: space-around;
-  padding: 0;
-  margin: 0;
-  align-items: center;
-}
-.bottom-row {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  justify-content: space-around;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin: 0;
-  align-items: center;
-}
+.top-row,
+.left-column,
+.bottom-row,
 .right-column {
   display: flex;
-  flex-direction: column-reverse;
   list-style-type: none;
-  justify-content: space-around;
-  padding: 0;
   margin: 0;
   align-items: center;
 }
+.top-row,
+.bottom-row {
+  flex-direction: row;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.left-column,
+.right-column {
+  flex-direction: column-reverse;
+  padding: 0;
+}
+.top-row li,
+.bottom-row li,
+.left-column li,
+.right-column li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-row li,
+.bottom-row li {
+  width: calc(100% / 8);
+}
+.left-column li,
+.right-column li {
+  height: calc(100% / 8);
+}
+
 .fields {
   border: 1px solid black;
 }

@@ -1,7 +1,6 @@
 .chess-board {
   width: 500px;
   height: 500px;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 25px 1fr 25px;
   grid-template-rows: 25px 1fr 25px;
@@ -9,6 +8,7 @@
     "top-row top-row top-row"
     "left-column fields right-column"
     "bottom-row bottom-row bottom-row";
+  background-image: url(dark_wood.png);
 }
 .top.numbering {
   grid-area: top-row;
@@ -30,6 +30,7 @@
   list-style-type: none;
   margin: 0;
   align-items: center;
+  color: white;
 }
 .horizontal.numbering {
   flex-direction: row;

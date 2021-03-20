@@ -8,7 +8,7 @@
     "top-row top-row top-row"
     "left-column fields right-column"
     "bottom-row bottom-row bottom-row";
-  background-image: url(dark_wood.png);
+  background-image: url(wood_1.png);
 }
 .top.numbering {
   grid-area: top-row;

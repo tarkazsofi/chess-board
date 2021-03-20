@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&display=swap");
 .chess-board {
   width: 500px;
   height: 500px;
@@ -31,6 +32,8 @@
   margin: 0;
   align-items: center;
   color: white;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: bold;
 }
 .horizontal.numbering {
   flex-direction: row;

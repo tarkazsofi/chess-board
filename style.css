@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&display=swap");
+html,
+body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .chess-board {
   width: 500px;
   height: 500px;
@@ -78,4 +87,75 @@
 }
 .row:nth-child(odd) .field:nth-child(odd) {
   background-color: white;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+}
+.chess-box {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  animation: boxRotation 5s linear infinite;
+  transform-style: preserve-3d;
+}
+.back.face {
+  transform: translateZ(-30px);
+  width: 100%;
+  height: 100%;
+  background-image: url(wood_1.png);
+}
+.right.face {
+  transform-origin: right;
+  transform: rotateY(-90deg);
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background-image: url(wood_1.png);
+}
+.left.face {
+  transform-origin: left;
+  transform: rotateY(90deg);
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-image: url(wood_1.png);
+}
+.bottom.face {
+  transform-origin: bottom;
+  transform: rotateX(90deg);
+  bottom: 0%;
+  height: 30px;
+  width: 100%;
+  background-image: url(wood_1.png);
+}
+.top.face {
+  transform-origin: top;
+  transform: rotateX(-90deg);
+  top: 0;
+  height: 30px;
+  width: 100%;
+  background-image: url(wood_1.png);
+}
+.face {
+  position: absolute;
+}
+@keyframes boxRotation {
+  from {
+    transform: rotateX(90deg) translateZ(0) rotateZ(0deg);
+  }
+  25% {
+    transform: rotateX(90deg) translateZ(-60vmin) rotateZ(180deg);
+  }
+  50% {
+    transform: rotateX(90deg) translateZ(0) rotateZ(360deg);
+  }
+  75% {
+    transform: rotateX(90deg) translateZ(60vmin) rotateZ(540deg);
+  }
+  to {
+    transform: rotateX(90deg) translateZ(0) rotateZ(720deg);
+  }
 }
